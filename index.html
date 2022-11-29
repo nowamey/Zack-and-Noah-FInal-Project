@@ -1,8 +1,4 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+
 <html lang="en">
 <head>
    <link rel="stylesheet" href="style.css">
@@ -10,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NBA Strength Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <p>hello world!</p>
   <div class="wrapper">
   <header class = "header h1"><h1>Which conference is strongest? Welcome to the NBA Strength Calculator!</header>
   <div class = "container">
@@ -22,7 +18,9 @@
     <div class = "right_section box ">
       <header class = "subtitle header h2 "><h2>Data results</header>
       <div class="carousel">
-        div cl
+        <div class = "chart_container">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
       <div>
         <p class = "box">Team of Conference </p>
@@ -30,7 +28,7 @@
   </div>
 </div>
 <div class="divisions box">
-  <form action="/api" method = "get" class = "division_form"></form>
+  <form action="/api" method = "get" class = "division_form">
   <div>  
     <label for="division_form">First division</label>
     <select name="division" id="division1">
@@ -52,9 +50,9 @@
     <option value="Pacific">Pacific</option>
     <option value="Southwest">Southwest</option>
     </select>
-  </form>
   </div>
   <button class = "submit" id="comp_divs">Compare Divisions!</button>
+</form>
 </div>
 
 </div>
