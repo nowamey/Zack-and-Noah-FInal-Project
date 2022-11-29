@@ -1,8 +1,4 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+
 <html lang="en">
 <head>
    <link rel="stylesheet" href="style.css">
@@ -10,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NBA Strength Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -21,41 +18,41 @@
     <div class = "right_section box ">
       <header class = "subtitle header h2 "><h2>Data results</header>
       <div class="carousel">
-        div cl
+        <div class = "chart_container">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
       <div>
         <p class = "box">Team of Conference </p>
   </div>
-    </div>
-    <div class="divisions box">
-      <form action="/api" method = "get" class = "division_form"></form>
-      <div>  
-        <label for="division_form">First division</label>
-        <select name="division" id="division1">
-        <option value="Atlantic">Atlantic</option>
-        <option value="Central">Central</option>
-        <option value="Southeast">Southeast</option>
-        <option value="Northwest">Northwest</option>
-        <option value="Pacific">Pacific</option>
-        <option value="Southwest">Southwest</option>
-        </select>
-      </div>
-      <div>
-        <label for="division_form">Second division</label>
-        <select name="division" id="division2">
-        <option value="Atlantic">Atlantic</option>
-        <option value="Central">Central</option>
-        <option value="Southeast">Southeast</option>
-        <option value="Northwest">Northwest</option>
-        <option value="Pacific">Pacific</option>
-        <option value="Southwest">Southwest</option>
-        </select>
-      </form>
-      </div>
-      <button class = "submit" id="comp_divs">Compare Divisions!</button>
-    </div>
-    
-    </div>
+  </div>
+</div>
+<div class="divisions box">
+  <form action="/api" method = "get" class = "division_form">
+  <div>  
+    <label for="division_form">First division</label>
+    <select name="division" id="division1">
+    <option value="Atlantic">Atlantic</option>
+    <option value="Central">Central</option>
+    <option value="Southeast">Southeast</option>
+    <option value="Northwest">Northwest</option>
+    <option value="Pacific">Pacific</option>
+    <option value="Southwest">Southwest</option>
+    </select>
+  </div>
+  <div>
+    <label for="division_form">Second division</label>
+    <select name="division" id="division2">
+    <option value="Atlantic">Atlantic</option>
+    <option value="Central">Central</option>
+    <option value="Southeast">Southeast</option>
+    <option value="Northwest">Northwest</option>
+    <option value="Pacific">Pacific</option>
+    <option value="Southwest">Southwest</option>
+    </select>
+  </div>
+  <button class = "submit" id="comp_divs">Compare Divisions!</button>
+</form>
 </div>
 
 </div>
