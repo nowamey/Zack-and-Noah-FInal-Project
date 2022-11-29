@@ -97,8 +97,9 @@ form {
   padding-bottom: 1.5rem;
   color:darkred
 }
-.divisions{
-  
+.divisions .box{
+  display: flex;
+  size: 500px;
 }
 
 /*
